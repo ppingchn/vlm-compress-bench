@@ -148,6 +148,6 @@ For the multi-group radar chart in the dashboard, all primary metrics are normal
 $$\text{Retention} = (compressed score / baseline score) \times 100$$
 
 For CHAIR-S (lower is better), the normalization is inverted:
-$$\text{Retention (\%)} = (compressed score / baseline score) \times 100$$
+$$\text{Retention} = (baseline score / compressed score) \times 100$$
 
 This ensures that for every group, a higher retention percentage consistently means the compressed model preserved more capability relative to baseline.
