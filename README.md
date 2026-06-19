@@ -83,7 +83,9 @@ This project uses **LLaVA-1.5-7B** as the reference baseline model.
 
 ## Project Structure
 vlm-compress-bench/
+
 │
+
 ├── README.md
 ├── requirements.txt
 │
