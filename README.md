@@ -87,33 +87,60 @@ vlm-compress-bench/
 │
 
 ├── README.md
+
 ├── requirements.txt
+
 │
+
 ├── benchmarker/
+
 │   ├── init.py
+
 │   ├── snapshot.py
+
 │   ├── evaluator.py
+
 │   ├── utils.py
+
 │   └── metrics/
+
 │       ├── general.py
+
 │       ├── vqa.py
+
 │       ├── captioning.py
+
 │       ├── visual_reasoning.py
+
 │       ├── ocr_document.py
+
 │       ├── hallucination.py
+
 │       └── spatial_awareness.py
+
 │
+
 ├── dashboard/
+
 │   └── app.py
+
 │
+
 ├── notebooks/
+
 │   └── demo_benchmark.ipynb
+
 │
+
 ├── snapshots/
+
 │   └── baselines.json
+
 │
+
 └── docs/
-└── metrics.md---
+
+└── metrics.md
 
 ## Requirements
 
