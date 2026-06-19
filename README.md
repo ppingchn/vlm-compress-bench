@@ -82,3 +82,52 @@ This project uses **LLaVA-1.5-7B** as the reference baseline model.
 ---
 
 ## Project Structure
+vlm-compress-bench/
+│
+├── README.md
+├── requirements.txt
+│
+├── benchmarker/
+│   ├── init.py
+│   ├── snapshot.py
+│   ├── evaluator.py
+│   ├── utils.py
+│   └── metrics/
+│       ├── general.py
+│       ├── vqa.py
+│       ├── captioning.py
+│       ├── visual_reasoning.py
+│       ├── ocr_document.py
+│       ├── hallucination.py
+│       └── spatial_awareness.py
+│
+├── dashboard/
+│   └── app.py
+│
+├── notebooks/
+│   └── demo_benchmark.ipynb
+│
+├── snapshots/
+│   └── baselines.json
+│
+└── docs/
+└── metrics.md---
+
+## Requirements
+
+- Python 3.9+
+- PyTorch
+- Transformers (HuggingFace)
+- Datasets (HuggingFace)
+- Plotly
+- Dash
+- Pillow
+- evaluate
+
+See `requirements.txt` for full version details.
+
+---
+
+## Acknowledgements
+
+This project is developed as a graduation project (專題) and is inspired by the LVLM-Compress-Bench framework published at NAACL 2025.
