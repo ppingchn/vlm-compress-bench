@@ -1,0 +1,30 @@
+# Core ML
+torch>=2.1.0
+torchvision>=0.16.0
+transformers>=4.40.0
+accelerate>=0.27.0
+peft>=0.10.0
+
+# Datasets & Evaluation
+datasets>=2.18.0
+evaluate>=0.4.1
+pycocotools>=2.0.7
+
+# Metrics
+nltk>=3.8.1
+rouge-score>=0.1.2
+sacrebleu>=2.3.1
+
+# Dashboard & Visualization
+plotly>=5.20.0
+dash>=2.16.0
+dash-bootstrap-components>=1.5.0
+
+# Utilities
+pillow>=10.2.0
+numpy>=1.26.0
+pandas>=2.2.0
+tqdm>=4.66.0
+
+# Persistence
+jsonschema>=4.21.0
