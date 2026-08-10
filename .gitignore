@@ -1,0 +1,51 @@
+# Context (private planning document)
+context.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model files (too large for git)
+*.pt
+*.pth
+*.onnx
+*.h5
+*.bin
+*.safetensors
+
+# Data
+data/
+
+# User snapshots (baselines are tracked)
+snapshots/user/
