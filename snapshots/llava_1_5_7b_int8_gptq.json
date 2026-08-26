@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "00000000-0000-0000-0000-000000000003",
+  "timestamp": "2026-08-25T23:24:00Z",
+  "model_info": {
+    "model_name": "LLaVA-1.5-7B-INT8-GPTQ",
+    "model_family": "LLaVA-1.5",
+    "base_llm": "Vicuna-7B-v1.5",
+    "vision_encoder": "CLIP-ViT-L/14-336px",
+    "precision": "int8",
+    "compression_method": "GPTQ",
+    "compression_config": {"bits": 8, "group_size": 128, "sym": true},
+    "is_baseline": false
+  },
+  "general_efficiency": {
+    "model_size_mb": 7254.1,
+    "parameter_count": 7062845440,
+    "compression_ratio": 1.86,
+    "inference_latency_ms": 198.3,
+    "gpu_memory_mb": 8412.0,
+    "throughput_tokens_per_sec": 65.4
+  },
+  "metrics": {
+    "vqa": {
+      "accuracy": 77.8,
+      "yes_no_accuracy": 85.3,
+      "number_accuracy": 53.1,
+      "other_accuracy": 71.5,
+      "dataset": "VQA-v2",
+      "num_samples": 214354
+    },
+    "captioning": {
+      "cider": 113.1,
+      "bleu4": 35.6,
+      "meteor": 29.4,
+      "rouge_l": 58.2,
+      "dataset": "COCO Captions",
+      "num_samples": 5000
+    },
+    "visual_reasoning": {
+      "accuracy": 60.5,
+      "consistency": 87.8,
+      "validity": 95.5,
+      "plausibility": 83.6,
+      "dataset": "GQA",
+      "num_samples": 12578
+    },
+    "ocr_document": {
+      "anls": 54.9,
+      "exact_match_accuracy": 39.5,
+      "partial_match_rate": 65.7,
+      "dataset": "TextVQA",
+      "num_samples": 5000
+    },
+    "hallucination": {
+      "chair_s": 55.6,
+      "chair_i": 15.9,
+      "coverage": 70.3,
+      "dataset": "COCO",
+      "num_samples": 500
+    },
+    "spatial_awareness": {
+      "accuracy": 61.7,
+      "above_below_accuracy": 69.8,
+      "left_right_accuracy": 57.0,
+      "near_far_accuracy": 53.6,
+      "inside_outside_accuracy": 66.5,
+      "gap_above_random": 11.7,
+      "dataset": "VSR",
+      "num_samples": 10972
+    }
+  },
+  "evaluation_config": {
+    "device": "cuda",
+    "batch_size": 1,
+    "max_new_tokens": 128,
+    "seed": 42
+  },
+  "label": "LLaVA-1.5-7B (INT8 GPTQ)",
+  "notes": "8-bit GPTQ quantization."
+}

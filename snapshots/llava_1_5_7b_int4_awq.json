@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "00000000-0000-0000-0000-000000000002",
+  "timestamp": "2026-08-25T23:24:00Z",
+  "model_info": {
+    "model_name": "LLaVA-1.5-7B-INT4-AWQ",
+    "model_family": "LLaVA-1.5",
+    "base_llm": "Vicuna-7B-v1.5",
+    "vision_encoder": "CLIP-ViT-L/14-336px",
+    "precision": "int4",
+    "compression_method": "AWQ",
+    "compression_config": {"bits": 4, "group_size": 128, "zero_point": true, "version": "GEMM"},
+    "is_baseline": false
+  },
+  "general_efficiency": {
+    "model_size_mb": 4152.6,
+    "parameter_count": 7062845440,
+    "compression_ratio": 3.25,
+    "inference_latency_ms": 142.7,
+    "gpu_memory_mb": 5108.0,
+    "throughput_tokens_per_sec": 89.6
+  },
+  "metrics": {
+    "vqa": {
+      "accuracy": 76.1,
+      "yes_no_accuracy": 84.5,
+      "number_accuracy": 51.2,
+      "other_accuracy": 69.8,
+      "dataset": "VQA-v2",
+      "num_samples": 214354
+    },
+    "captioning": {
+      "cider": 108.5,
+      "bleu4": 34.1,
+      "meteor": 28.6,
+      "rouge_l": 56.8,
+      "dataset": "COCO Captions",
+      "num_samples": 5000
+    },
+    "visual_reasoning": {
+      "accuracy": 58.7,
+      "consistency": 86.1,
+      "validity": 94.8,
+      "plausibility": 82.3,
+      "dataset": "GQA",
+      "num_samples": 12578
+    },
+    "ocr_document": {
+      "anls": 51.4,
+      "exact_match_accuracy": 36.7,
+      "partial_match_rate": 62.1,
+      "dataset": "TextVQA",
+      "num_samples": 5000
+    },
+    "hallucination": {
+      "chair_s": 58.7,
+      "chair_i": 17.2,
+      "coverage": 68.4,
+      "dataset": "COCO",
+      "num_samples": 500
+    },
+    "spatial_awareness": {
+      "accuracy": 59.8,
+      "above_below_accuracy": 67.9,
+      "left_right_accuracy": 55.1,
+      "near_far_accuracy": 51.8,
+      "inside_outside_accuracy": 64.2,
+      "gap_above_random": 9.8,
+      "dataset": "VSR",
+      "num_samples": 10972
+    }
+  },
+  "evaluation_config": {
+    "device": "cuda",
+    "batch_size": 1,
+    "max_new_tokens": 128,
+    "seed": 42
+  },
+  "label": "LLaVA-1.5-7B (INT4 AWQ)",
+  "notes": "4-bit AWQ quantization with group_size=128."
+}
