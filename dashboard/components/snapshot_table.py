@@ -74,7 +74,7 @@ def create_snapshot_table(snapshots_list: List[Dict[str, Any]]) -> dbc.Table:
         striped=True,
         bordered=True,
         hover=True,
-        dark=True,
+        color='dark',
         responsive=True,
         className='mt-3',
         style={'backgroundColor': COLORS['card_bg']}

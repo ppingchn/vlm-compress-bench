@@ -75,17 +75,17 @@ def create_group_comparison_bars(
             xanchor='left',
         )
 
-    fig.update_layout(
+    fig.update_layout(**{
         **CHART_LAYOUT,
-        barmode='group',
-        title=dict(
+        'barmode': 'group',
+        'title': dict(
             text=f'{METRIC_GROUP_LABELS.get(group_name, group_name)} — Metric Comparison',
             font=dict(size=14),
         ),
-        yaxis=dict(autorange="reversed"),
-        xaxis=dict(gridcolor=COLORS['grid_color']),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-    )
+        'yaxis': dict(autorange="reversed"),
+        'xaxis': dict(gridcolor=COLORS['grid_color']),
+        'legend': dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+    })
 
     return fig
 
@@ -132,17 +132,17 @@ def create_overview_bars(
         all_vals.extend(r.values())
     y_max = max(all_vals) if all_vals else 120
 
-    fig.update_layout(
+    fig.update_layout(**{
         **CHART_LAYOUT,
-        barmode='group',
-        title=dict(text='Capability Retention Overview', font=dict(size=14)),
-        yaxis=dict(
+        'barmode': 'group',
+        'title': dict(text='Capability Retention Overview', font=dict(size=14)),
+        'yaxis': dict(
             title='Retention (%)',
             range=[0, min(y_max + 15, 150)],
             gridcolor=COLORS['grid_color'],
         ),
-        xaxis=dict(gridcolor=COLORS['grid_color']),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-    )
+        'xaxis': dict(gridcolor=COLORS['grid_color']),
+        'legend': dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+    })
 
     return fig

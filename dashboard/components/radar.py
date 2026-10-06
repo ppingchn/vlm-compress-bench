@@ -43,10 +43,10 @@ def create_radar_chart(
             hovertemplate='%{theta}: %{r:.1f}%<extra>' + label + '</extra>',
         ))
     
-    fig.update_layout(
+    fig.update_layout(**{
         **CHART_LAYOUT,
-        title=dict(text=title, font=dict(size=16)),
-        polar=dict(
+        'title': dict(text=title, font=dict(size=16)),
+        'polar': dict(
             bgcolor=COLORS['chart_bg'],
             radialaxis=dict(
                 visible=True,
@@ -62,9 +62,9 @@ def create_radar_chart(
                 tickfont=dict(size=12, color=COLORS['text_secondary']),
             ),
         ),
-        showlegend=True,
-        legend=dict(x=1.1, y=1),
-    )
+        'showlegend': True,
+        'legend': dict(x=1.1, y=1),
+    })
     
     return fig
 
